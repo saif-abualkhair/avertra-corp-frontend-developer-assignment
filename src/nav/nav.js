@@ -11,7 +11,7 @@ function Nav() {
   };
 
   const onFocusOut = event => {
-    setIsActive(current => { console.log('hello abd'); return false; });
+    setIsActive(current => { return false; });
   }
   return (
     <nav className="app-nav">
@@ -63,7 +63,7 @@ function Nav() {
           </li>
         </ul>
       </div>
-      <div className={isActive ? 'overlay toggle-on' : 'overlay'} onClick = {onFocusOut}></div>
+      <div className={isActive ? 'overlay toggle-on' : 'overlay'} onClick={onFocusOut}></div>
     </nav>
   );
 }
