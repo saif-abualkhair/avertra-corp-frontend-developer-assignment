@@ -1,0 +1,11 @@
+.upper {
+    /* test */
+    min-height: 350px;
+}
+
+.bottom {
+    /* background-color: #eff1f6; to hsl */
+    /* test */
+    min-height: 350px;
+    background-color: hsl(240, 78%, 98%);
+}

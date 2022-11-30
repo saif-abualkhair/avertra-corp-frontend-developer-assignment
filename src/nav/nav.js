@@ -14,7 +14,8 @@ function Nav() {
     setIsActive(current => { return false; });
   }
   return (
-    <nav className="app-nav">
+    <div className='container'>
+       <nav className="app-nav">
       <div className='nav-left-lg'>
         <div className='logo'>
           Shortly
@@ -29,7 +30,7 @@ function Nav() {
 
       <div className='nav-right-lg'>
         <button className='btn text-grayish-violet'>Login</button>
-        <button className='btn bg-cyan rounded'>Sign Up</button>
+        <button className='btn btn-cyan rounded'>Sign Up</button>
       </div>
 
       <div className='nav-left-sm'>
@@ -59,12 +60,13 @@ function Nav() {
             <button className='btn text-light'>Login</button>
           </li>
           <li className='nav-item text-light text-center'>
-            <button className='btn bg-cyan rounded sign-up-sm'>Sign Up</button>
+            <button className='btn btn-cyan rounded sign-up-sm'>Sign Up</button>
           </li>
         </ul>
       </div>
       <div className={isActive ? 'overlay toggle-on' : 'overlay'} onClick={onFocusOut}></div>
     </nav>
+    </div>
   );
 }
 

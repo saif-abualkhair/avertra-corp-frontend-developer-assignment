@@ -12,7 +12,7 @@ function List() {
     }
     return (
         <div>
-            <button className="btn bg-cyan" onClick={handleClick}>add to list</button>
+            <button className="btn btn-cyan" onClick={handleClick}>add to list</button>
             <ul>
                 {arr.map((el, index) => (
                     <li key={index}>{el}</li>

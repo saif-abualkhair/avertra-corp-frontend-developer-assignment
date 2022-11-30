@@ -27,7 +27,7 @@ function Form() {
       <input onChange={handleChange}></input>
       {getMessage(isValid)}
 
-      <button className='btn bg-cyan' type='button' onClick={handleSubmit}>Submit</button>
+      <button className='btn btn-cyan' type='button' onClick={handleSubmit}>Submit</button>
     </form>
   );
 }

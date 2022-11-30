@@ -1,0 +1,113 @@
+.shorten {
+    position: relative;
+    top: -60px;
+}
+
+.shorten-banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 20px 20px;
+    border-radius: 4px;
+}
+
+.input-group {
+    margin: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.shorten-button {
+    width: calc(15% - 20px);
+    height: 40px;
+    margin: 0 10px;
+    box-sizing: border-box;
+}
+
+.invalid {
+    transition: all 0.3s ease-in-out;
+    outline: 2px solid #d86a76 !important;
+}
+
+.shorten-input {
+    width: 85%;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    border-radius: 4px;
+}
+
+.shorten-input:focus {
+    transition: all 0.3s ease-in-out;
+    outline: 2px solid #2acfcf;
+}
+
+.shorten-input::placeholder, .invalid::placeholder {
+    color: rgba(0, 0, 0, 0.164);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.invalid::placeholder {
+    color: #d86a76;
+}
+
+.invalid-message {
+    color: #d86a76;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.link-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+.links {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    width: 100%;
+}
+
+.copy-btn {
+    margin: 0 15px;
+}
+
+/* on button click */
+.copy-btn.active {
+    animation: copy-animation 1s ease-in-out;
+    color: #ffffff;
+}
+
+@keyframes copy-animation {
+    0% {
+        background-color: var(--cyan);
+        color: white;
+    }
+
+    100% {
+        background-color: var(--dark-violet);
+        color: white;
+    }
+}
+
+.short-link, .original-link {
+    max-width: 45%;
+    overflow: auto;
+}
+
+/* .background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+} */
