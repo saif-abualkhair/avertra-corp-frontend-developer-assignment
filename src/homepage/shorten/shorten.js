@@ -1,5 +1,6 @@
 import './shorten.css';
 import { useState } from 'react';
+import LinkCard from './link-card/link-card';
 
 function Shorten() {
     const [isValid, setIsValid] = useState(true);
@@ -1022,29 +1023,11 @@ function Shorten() {
             return <span className='invalid-message'>Please Add a Link</span>;
     };
 
-    const copyShortLink = (url) => {
-        navigator.clipboard.writeText(url.shortLink);
-        url.clicked = true;
-        setUrlList([...urlList]);
-        setTimeout(() => {
-            url.clicked = false;
-            setUrlList([...urlList]);
-        }, 1000);
-    }
+
 
     const getLinksList = () => {
-        return urlList.map(url => {
-            return <div className='link-card' key={url.id}>
-                <span className='links'>
-                    <span className='original-link text-gray-violet'>
-                        {url.originalLink}
-                    </span>
-                    <span className='short-link text-cyan'>
-                        {url.shortLink}
-                    </span>
-                </span>
-                <button className={url.clicked ? 'btn btn-cyan copy-btn active' : 'btn btn-cyan copy-btn'} onClick={() => { copyShortLink(url) }}>{url.clicked ? 'Copied!' : 'Copy'}</button>
-            </div >
+        return urlList.map((url, index) => {
+            return <LinkCard key={index} url={url}></LinkCard>
         });
     }
 
@@ -1072,35 +1055,3 @@ function Shorten() {
 }
 
 export default Shorten;
-
-
-
-//other example
-// let nextId = 0;
-
-// export default function List() {
-//     const [name, setName] = useState('');
-//     const [artists, setArtists] = useState([]);
-
-//     return (
-//         <>
-//             <h1>Inspiring sculptors:</h1>
-//             <input
-//                 value={name}
-//                 onChange={e => setName(e.target.value)}
-//             />
-//             <button onClick={() => {
-//                 setName('');
-//                 setArtists([
-//                     ...artists,
-//                     { id: nextId++, name: name }
-//                 ]);
-//             }}>Add</button>
-//             <ul>
-//                 {artists.map(artist => (
-//                     <li key={artist.id}>{artist.name}</li>
-//                 ))}
-//             </ul>
-//         </>
-//     );
-// }

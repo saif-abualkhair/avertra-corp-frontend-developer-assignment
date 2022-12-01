@@ -60,50 +60,6 @@
     margin: 10px 0;
 }
 
-.link-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 4px;
-    background-color: #ffffff;
-}
-
-.links {
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: space-between;
-    width: 100%;
-}
-
-.copy-btn {
-    margin: 0 15px;
-}
-
-/* on button click */
-.copy-btn.active {
-    animation: copy-animation 1s ease-in-out;
-    color: #ffffff;
-}
-
-@keyframes copy-animation {
-    0% {
-        background-color: var(--cyan);
-        color: white;
-    }
-
-    100% {
-        background-color: var(--dark-violet);
-        color: white;
-    }
-}
-
-.short-link, .original-link {
-    max-width: 45%;
-    overflow: auto;
-}
-
 /* .background-img {
     position: absolute;
     top: 0;
