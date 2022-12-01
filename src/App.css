@@ -136,54 +136,78 @@ body {
   background-color: var(--cyan);
 }
 
-.btn-cyan:hover {  
+.btn-cyan:hover:enabled {
   background-color: hsl(181, 56%, 75%);
+}
+
+.btn-cyan:disabled {
+  background-color: hsl(180, 28%, 50%);
 }
 
 .btn-dark-violet {
   background-color: var(--dark-violet);
 }
 
-.btn-dark-violet:hover {
+.btn-dark-violet:hover:enabled {
   background-color: hsl(258, 25%, 59%);
+}
+
+.btn-dark-violet:disabled {
+  background-color: hsl(257, 21%, 39%);
 }
 
 .btn-red {
   background-color: var(--red);
 }
 
-.btn-red:hover {
+.btn-red:hover:enabled {
   background-color: hsl(0, 35%, 73%);
+}
+
+.btn-red:disabled {
+  background-color: hsl(0, 21%, 36%);
 }
 
 .btn-gray {
   background-color: var(--gray);
 }
 
-.btn-gray:hover {
+.btn-gray:hover:enabled {
   background-color: hsl(0, 1%, 46%);
+}
+
+.btn-gray:disabled {
+  background-color: hsl(0, 1%, 27%);
 }
 
 .btn-grayish-violet {
   background-color: var(--grayish-violet);
 }
 
-.btn-grayish-violet:hover {
+.btn-grayish-violet:hover:enabled {
   background-color: hsl(256, 5%, 44%);
+}
+
+.btn-grayish-violet:disabled {
+  background-color: hsl(257, 11%, 24%);
 }
 
 .btn-very-dark-blue {
   background-color: var(--very-dark-blue);
 }
 
-.btn-very-dark-blue:hover {
+.btn-very-dark-blue:hover:enabled {
   background-color: hsl(256, 24%, 35%);
+}
+
+.btn-very-dark-blue:disabled {
+  background-color: hsl(255, 26%, 21%);
 }
 
 .btn-very-dark-violet {
   background-color: var(--very-dark-violet);
 }
 
-.btn-very-dark-violet:hover {
-  background-color: hsl(259, 11%, 48%);
+.btn-very-dark-violet:disabled {
+  background-color: hsl(258, 21%, 22%);
 }

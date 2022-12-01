@@ -103,10 +103,6 @@
     width: 100%;
 }
 
-.btn:hover {
-    color: var(--grayish-violet) !important;
-}
-
 /* add media query if screen is larger than 786 */
 
 @media only screen and (max-width : 768px) {

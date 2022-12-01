@@ -60,6 +60,21 @@
     margin: 10px 0;
 }
 
+.loader {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/*
+    Set the color of the icon
+  */
+svg path,
+svg rect {
+    fill: var(--cyan);
+}
+
 /* .background-img {
     position: absolute;
     top: 0;
