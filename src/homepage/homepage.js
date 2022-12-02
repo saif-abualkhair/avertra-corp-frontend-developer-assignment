@@ -19,17 +19,16 @@ function HomePage() {
                     <div className='get-started-area'>
                         <button className='btn btn-cyan rounded'>Get Started</button>
                     </div>
-                    {/* <div className='illustration-working'></div> */}
                 </div>
             </div>
 
             <div className='bottom'>
                 <div className='container'>
                     <Shorten></Shorten>
+                    <AdvancedStatistics></AdvancedStatistics>
                 </div>
+                {/* <BoostYourLinksBanner></BoostYourLinksBanner> */}
             </div>
-            {/* <AdvancedStatistics></AdvancedStatistics>
-            <BoostYourLinksBanner></BoostYourLinksBanner> */}
         </div>
     );
 }

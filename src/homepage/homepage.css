@@ -14,21 +14,21 @@
 }
 
 .text-head, .text-smaller {
-    word-spacing: 2px;
+    word-spacing: 1px;
     line-height: 1.2;
 }
 
 .text-head {
     display: block;
     font-size: calc(6rem - 100%);
-    font-weight: 700;
+    /* font-weight: 1000; */
 }
 
 .text-smaller {
     display: block;
     /* font-size: 1.3rem; */
     font-size: calc(2.4rem - 100%);
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .get-started-area {
@@ -37,7 +37,6 @@
 }
 
 .bottom {
-    min-height: 350px;
     background-color: hsl(240, 78%, 98%);
 }
 
