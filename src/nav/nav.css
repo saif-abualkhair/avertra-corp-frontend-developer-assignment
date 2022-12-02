@@ -57,9 +57,10 @@
     border-radius: 50%;
 }
 
-.hamburger-menu:hover {
+/* removed hover effect for the hamburger menu button */
+/* .hamburger-menu:hover {
     background-color: rgba(0, 0, 0, 0.075);
-}
+} */
 
 .bar {
     border: 1px solid var(--grayish-violet);

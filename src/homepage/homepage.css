@@ -1,13 +1,10 @@
 .homepage {
     background: url(../assets/images/illustration-working.svg) no-repeat;
     background-size: 50% auto;
-    /* background-size: cover; */
     background-position: top 0% right -150px;
 }
 
 .upper {
-    /* test */
-    /* min-height: 350px; */
     margin: 75px 0;
     padding: 75px 0;
     position: relative;
@@ -21,12 +18,11 @@
 .text-head {
     display: block;
     font-size: calc(6rem - 100%);
-    /* font-weight: 1000; */
+    font-weight: 700;
 }
 
 .text-smaller {
     display: block;
-    /* font-size: 1.3rem; */
     font-size: calc(2.4rem - 100%);
     font-weight: 700;
 }
@@ -34,6 +30,10 @@
 .get-started-area {
     display: block;
     margin: 25px 0;
+}
+
+.get-started-area .btn {
+    width: 180px;
 }
 
 .bottom {
@@ -44,5 +44,33 @@
     .homepage {
         background-size: 100% auto;
         background-position: top 0% right -50px;
+    }
+
+    .margin-test {
+        margin: 200px;
+    }
+
+    .text-head, .text-smaller {
+        word-spacing: 0;
+        line-height: 1;
+    }
+
+    .text-head {
+        margin: 10px 0;
+        display: block;
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .text-smaller {
+        margin: 10px 0;
+        display: block;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .get-started-area {
+        display: flex;
+        justify-content: center;
     }
 }

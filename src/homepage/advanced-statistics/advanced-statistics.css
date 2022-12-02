@@ -1,0 +1,15 @@
+.advanced-statistics-title, .advanced-statistics-description {
+    display: block;
+    text-align: center;
+}
+
+.advanced-statistics-title {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+@media only screen and (max-width : 768px) {
+    .advanced-statistics-title {
+        font-size: 2rem;
+    }
+}
