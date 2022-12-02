@@ -1,12 +1,9 @@
 import './nav.css';
 import { useState } from 'react';
 
-let isToggled = false;
-
 function Nav() {
   const [isActive, setIsActive] = useState(false);
   const handleClick = event => {
-    // 👇️ toggle isActive state on click
     setIsActive(current => !current);
   };
 

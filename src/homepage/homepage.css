@@ -1,11 +1,49 @@
+.homepage {
+    background: url(../assets/images/illustration-working.svg) no-repeat;
+    background-size: 50% auto;
+    /* background-size: cover; */
+    background-position: top 0% right -150px;
+}
+
 .upper {
     /* test */
-    min-height: 350px;
+    /* min-height: 350px; */
+    margin: 75px 0;
+    padding: 75px 0;
+    position: relative;
+}
+
+.text-head, .text-smaller {
+    word-spacing: 2px;
+    line-height: 1.2;
+}
+
+.text-head {
+    display: block;
+    font-size: calc(6rem - 100%);
+    font-weight: 700;
+}
+
+.text-smaller {
+    display: block;
+    /* font-size: 1.3rem; */
+    font-size: calc(2.4rem - 100%);
+    font-weight: 500;
+}
+
+.get-started-area {
+    display: block;
+    margin: 25px 0;
 }
 
 .bottom {
-    /* background-color: #eff1f6; to hsl */
-    /* test */
     min-height: 350px;
     background-color: hsl(240, 78%, 98%);
+}
+
+@media only screen and (max-width : 768px) {
+    .homepage {
+        background-size: 100% auto;
+        background-position: top 0% right -50px;
+    }
 }

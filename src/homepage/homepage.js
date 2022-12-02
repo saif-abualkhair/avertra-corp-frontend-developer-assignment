@@ -8,15 +8,24 @@ function HomePage() {
         <div className='homepage'>
             <div className='container'>
                 <div className='upper'>
-                    More than just shorter links
-                    build your brand's recognition and get detailed insights on how your links are performing.
-                    <button className='btn btn-cyan rounded'>Get Started</button>
+                    <span className='text-very-dark-violet text-head'>More than just</span>
+                    <span className='text-very-dark-violet text-head'>shorter links</span>
+                    <span className='text-grayish-violet text-smaller'>
+                        build your brand's recognition and get detailed
+                    </span>
+                    <span className='text-grayish-violet text-smaller'>
+                        insights on how your links are performing.
+                    </span>
+                    <div className='get-started-area'>
+                        <button className='btn btn-cyan rounded'>Get Started</button>
+                    </div>
+                    {/* <div className='illustration-working'></div> */}
                 </div>
             </div>
 
             <div className='bottom'>
                 <div className='container'>
-                <Shorten></Shorten>
+                    <Shorten></Shorten>
                 </div>
             </div>
             {/* <AdvancedStatistics></AdvancedStatistics>

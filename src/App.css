@@ -1,4 +1,4 @@
-@import url('https://fonts.google.com/specimen/Poppins');
+/* @import url('https://fonts.google.com/specimen/Poppins'); */
 
 .test {
   height: 350px;
@@ -7,7 +7,8 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins'; */
+  font-family: 'Poppins';
   font-size: 18px;
   font-weight: 500;
 }
@@ -75,33 +76,33 @@ body {
 }
 
 .bg-dark-violet {
-  background-color: var(--dark-violet);
+  background-color: var(--dark-violet) !important;
 }
 
 /* Secondary */
 .bg-red {
-  background-color: var(--red);
+  background-color: var(--red) !important;
 }
 
 /* Neutral */
 .bg-gray {
-  background-color: var(--gray);
+  background-color: var(--gray) !important;
 }
 
 .bg-grayish-violet {
-  background-color: var(--grayish-violet);
+  background-color: var(--grayish-violet) !important;
 }
 
 .bg-very-dark-blue {
-  background-color: var(--very-dark-blue);
+  background-color: var(--very-dark-blue) !important;
 }
 
 .bg-very-dark-violet {
-  background-color: var(--very-dark-violet);
+  background-color: var(--very-dark-violet) !important;
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -110,7 +111,7 @@ body {
   border: none;
   outline: none;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 10px 20px;
   font-weight: 700;
   background-color: transparent;
