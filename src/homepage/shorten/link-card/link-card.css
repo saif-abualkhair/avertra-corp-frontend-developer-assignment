@@ -41,3 +41,34 @@
     max-width: 45%;
     overflow: auto;
 }
+
+.separator{
+    display: hidden;
+    margin: 15px 0;
+    background-color: rgba(0, 0, 0, 0.116);
+}
+
+@media only screen and (max-width : 768px) {
+    .link-card {
+        flex-direction: column;
+    }
+
+    .links {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .copy-btn {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .short-link, .original-link{
+        max-width: 100%;
+    }
+
+    .separator{
+        display: blick;
+    }
+}

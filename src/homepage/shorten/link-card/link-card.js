@@ -17,6 +17,7 @@ function LinkCard(props) {
                 <span className='original-link text-gray-violet'>
                     {props.url.originalLink}
                 </span>
+                <div className="separator"></div>
                 <span className='short-link text-cyan'>
                     {props.url.shortLink}
                 </span>
