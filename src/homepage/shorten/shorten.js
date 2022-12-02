@@ -77,14 +77,17 @@ function Shorten() {
         <div className='shorten'>
             <div className='shorten-banner bg-very-dark-blue'>
                 <div className='input-group'>
-                    <input className={!isValid && hasBeenClickedAtLeastOnce ? 'shorten-input invalid' : 'shorten-input'} placeholder='Shorten a link here...'
-                        value={url}
-                        onChange={e => setName(e.target.value)} />
+                    <span className="validation">
+                        <input className={!isValid && hasBeenClickedAtLeastOnce ? 'shorten-input invalid' : 'shorten-input'} placeholder='Shorten a link here...'
+                            value={url}
+                            onChange={e => setName(e.target.value)} />
+                        {getInvalidMessage()}
+                    </span>
+
                     <button className='btn btn-cyan shorten-button' onClick={onSubmit}
                         disabled={isLoading}>
                         Shorten it!
                     </button>
-                    {getInvalidMessage()}
                     {getLoading()}
                 </div>
             </div >

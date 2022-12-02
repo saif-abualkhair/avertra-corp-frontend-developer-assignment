@@ -10,6 +10,8 @@
     padding: 30px 30px;
     border-radius: 8px;
     background: url(../../assets/images/bg-shorten-desktop.svg) no-repeat;
+    /* cover */
+    background-size: 100% 100%;
 }
 
 .input-group {
@@ -56,7 +58,7 @@
 
 .invalid-message {
     position: absolute;
-    bottom: -35px;
+    bottom: -50px;
     left: 0;
     color: #d86a76;
     font-style: italic;
@@ -70,6 +72,22 @@
     left: 100%;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.validation {
+    position: relative;
+}
+
+@media only screen and (max-width : 768px) {
+    .shorten-button, .shorten-input {
+        width: 100%;
+
+    }
+
+    .shorten-button {
+        margin: 35px 0;
+        width: 100%;
+    }
 }
 
 /*
