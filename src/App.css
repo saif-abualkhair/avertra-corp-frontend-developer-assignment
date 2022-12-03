@@ -226,3 +226,20 @@ body {
 .sh-customizable {
   background: url('/src/assets/images/icon-fully-customizable.svg') no-repeat;
 }
+
+
+.sh-facebook {
+  background: url('/src/assets/images/icon-facebook.svg') no-repeat;
+}
+
+.sh-instagram {
+  background: url('/src/assets/images/icon-instagram.svg') no-repeat;
+}
+
+.sh-twitter {
+  background: url('/src/assets/images/icon-twitter.svg') no-repeat;
+}
+
+.sh-pinterest {
+  background: url('/src/assets/images/icon-pinterest.svg') no-repeat;
+}

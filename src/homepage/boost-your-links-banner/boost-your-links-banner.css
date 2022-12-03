@@ -1,0 +1,19 @@
+.boost-your-links-banner {
+    width: 100%;
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+    background: url('../../assets/images/bg-boost-desktop.svg') no-repeat center;
+}
+
+.boost-your-links-title {
+    font-size: 1.5rem;
+    margin: 20px;
+    display: block;
+    font-weight: 700;
+    text-align: center;
+}
+
+.boost-your-links-banner .btn{
+    width: 150px;
+}

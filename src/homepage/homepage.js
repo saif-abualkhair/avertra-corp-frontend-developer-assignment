@@ -28,8 +28,8 @@ function HomePage() {
                     <Shorten></Shorten>
                     <AdvancedStatistics></AdvancedStatistics>
                 </div>
-                {/* <BoostYourLinksBanner></BoostYourLinksBanner> */}
             </div>
+            <BoostYourLinksBanner></BoostYourLinksBanner>
         </div>
     );
 }

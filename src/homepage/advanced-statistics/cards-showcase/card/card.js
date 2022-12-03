@@ -4,7 +4,7 @@ function Card(props) {
     return (
         <div className='card'>
             <div className='icon-wrapper bg-very-dark-violet'>
-                <span className='icon sh sh-brand'>
+                <span className='icon'>
                     <span className={props.iconClass}></span>
                 </span>
             </div>

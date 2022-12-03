@@ -67,7 +67,7 @@
     margin: 10px 0;
 }
 
-.loader {
+.loader-wrapper {
     position: absolute;
     left: 100%;
     top: 50%;
@@ -93,8 +93,8 @@
 /*
     Set the color of the icon
   */
-svg path,
-svg rect {
+.loader path,
+.loader rect {
     fill: var(--cyan);
 }
 

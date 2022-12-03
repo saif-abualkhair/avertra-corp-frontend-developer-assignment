@@ -48,8 +48,8 @@ function Shorten() {
 
     const getLoading = () => {
         if (isLoading)
-            return <div className="loader loader--style5" title="4">
-                <svg version="1.1" id="Layer_1" x="0px" y="0px"
+            return <div className="loader-wrapper" title="4">
+                <svg version="1.1" className='loader' x="0px" y="0px"
                     width="24px" height="30px" viewBox="0 0 24 30">
                     <rect x="0" y="0" width="4" height="10" fill="#333">
                         <animateTransform attributeType="xml"
