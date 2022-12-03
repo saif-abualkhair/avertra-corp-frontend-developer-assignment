@@ -3,19 +3,27 @@ import { useState } from 'react';
 import LinkCard from './link-card/link-card';
 import axios from "axios";
 
+const getLocalStorage = () => {
+    const ul = JSON.parse(localStorage.getItem('urlList'));
+    return ul ? ul : [];
+}
+
+const syncLocalStorage = (ul) => {
+    localStorage.setItem('urlList', JSON.stringify(ul));
+}
+
 function Shorten() {
     const [isValid, setIsValid] = useState(false);
     const [hasBeenClickedAtLeastOnce, setHasBeenClickedAtLeastOnce] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [url, setUrl] = useState('');
-    const [urlList, setUrlList] = useState([]);
+    const [urlList, setUrlList] = useState(getLocalStorage());
     const [toastMessage, setToastMessage] = useState(undefined);
 
     const setValueWithValidityCheck = (event) => {
         setIsValid((event && event != ''));
         setUrl(event);
     }
-
 
     // pattern validation
     // const isValidUrl = urlString => {
@@ -44,9 +52,13 @@ function Shorten() {
                 setIsLoading(false);
                 setValueWithValidityCheck('');
                 setHasBeenClickedAtLeastOnce(false);
+                let newUrlList = [...urlList];
+                newUrlList.unshift({ originalLink: response.data.result.original_link, shortLink: response.data.result.share_link });
                 setUrlList([
-                    ...urlList,
-                    { originalLink: response.data.result.original_link, shortLink: response.data.result.share_link }
+                    ...newUrlList,
+                ]);
+                syncLocalStorage([
+                    ...newUrlList,
                 ]);
             })
             .catch(error => {
