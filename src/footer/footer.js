@@ -1,3 +1,4 @@
+import Logo from '../logo/logo'
 import './footer.css';
 
 function Footer() {
@@ -5,7 +6,7 @@ function Footer() {
         <div className='footer bg-very-dark-violet'>
             <div className="container footer-wrapper">
                 <div className="footer-logo">
-                    Shortly
+                    <Logo color="#fff"></Logo>
                 </div>
                 <div className="footer-links-area">
                     <div className="footer-links">

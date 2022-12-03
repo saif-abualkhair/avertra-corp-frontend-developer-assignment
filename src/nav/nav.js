@@ -1,4 +1,5 @@
 import './nav.css';
+import Logo from '../logo/logo';
 import { useState } from 'react';
 
 function Nav() {
@@ -15,7 +16,7 @@ function Nav() {
       <nav className="app-nav">
         <div className='nav-left-lg'>
           <div className='logo'>
-            Shortly
+            <Logo color="hsl(260, 8%, 14%)"></Logo>
           </div>
 
           <ul className='links-lg'>
@@ -62,8 +63,8 @@ function Nav() {
           </ul>
         </div>
         <div className={isActive ? 'overlay toggle-on' : 'overlay'} onClick={onFocusOut}></div>
-      </nav>
-    </div>
+      </nav >
+    </div >
   );
 }
 
