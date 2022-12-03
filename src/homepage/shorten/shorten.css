@@ -10,7 +10,6 @@
     padding: 30px 30px;
     border-radius: 8px;
     background: url(../../assets/images/bg-shorten-desktop.svg) no-repeat;
-    /* cover */
     background-size: 100% 100%;
 }
 
@@ -23,6 +22,7 @@
 .shorten-button {
     width: calc(20% - 30px);
     height: 50px;
+    font-size: 18px;
     margin: 0 15px;
     box-sizing: border-box;
 }
@@ -39,6 +39,9 @@
     outline: none;
     padding: 0 15px;
     border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: poppins, sans-serif;
 }
 
 .shorten-input:focus {
@@ -78,6 +81,13 @@
     position: relative;
 }
 
+
+
+.loader path,
+.loader rect {
+    fill: var(--cyan);
+}
+
 @media only screen and (max-width : 768px) {
     .shorten-button, .shorten-input {
         width: 100%;
@@ -88,20 +98,10 @@
         margin: 35px 0;
         width: 100%;
     }
-}
 
-/*
-    Set the color of the icon
-  */
-.loader path,
-.loader rect {
-    fill: var(--cyan);
+    .loader-wrapper {
+        left: 50%;
+        top: 100%;
+        transform: translateX(-50%);
+    }
 }
-
-/* .background-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-} */

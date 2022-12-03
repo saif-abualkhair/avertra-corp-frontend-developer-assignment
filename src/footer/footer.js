@@ -10,7 +10,7 @@ function Footer() {
                 </div>
                 <div className="footer-links-area">
                     <div className="footer-links">
-                        <h5>Company</h5>
+                        <h5>Features</h5>
                         <ul className='footer-links-list'>
                             <li className='footer-links-list-item'>
                                 <a className='text-grayish-violet footer-links-list-item-link' href="#">Link Shortening</a>
@@ -25,7 +25,7 @@ function Footer() {
                     </div>
 
                     <div className="footer-links">
-                        <h5>Company</h5>
+                        <h5>Resources</h5>
                         <ul className='footer-links-list'>
                             <li className='footer-links-list-item'>
                                 <a className='text-grayish-violet footer-links-list-item-link' href="#">Blog</a>

@@ -7,13 +7,32 @@ function Shorten() {
     const [isValid, setIsValid] = useState(false);
     const [hasBeenClickedAtLeastOnce, setHasBeenClickedAtLeastOnce] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
-    const [url, setName] = useState('');
+    const [url, setUrl] = useState('');
     const [urlList, setUrlList] = useState([]);
+    const [toastMessage, setToastMessage] = useState(undefined);
 
-    const onSubmit = () => {
+    const setValueWithValidityCheck = (event) => {
+        setIsValid((event && event != ''));
+        setUrl(event);
+    }
+
+
+    // pattern validation
+    // const isValidUrl = urlString => {
+    //     var urlPattern = new RegExp('^(https?:\\/\\/)?' +
+    //         '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' +
+    //         '((\\d{1,3}\\.){3}\\d{1,3}))' +
+    //         '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' +
+    //         '(\\?[;&a-z\\d%_.~+=-]*)?' +
+    //         '(\\#[-a-z\\d_]*)?$', 'i');
+    //     const isValidOnUrlPattern = !!urlPattern.test(urlString);
+    // }
+
+    const onSubmit = (event) => {
+        event.preventDefault();
         if (!hasBeenClickedAtLeastOnce)
             setHasBeenClickedAtLeastOnce(true);
-        setIsValid((url && url != ''));
+        // setIsValid((url && url != ''));
         if (isValid)
             shortify(url);
     }
@@ -23,7 +42,8 @@ function Shorten() {
         axios.get("https://api.shrtco.de/v2/shorten", { params: { url: url } })
             .then(response => {
                 setIsLoading(false);
-                setName('');
+                setValueWithValidityCheck('');
+                setHasBeenClickedAtLeastOnce(false);
                 setUrlList([
                     ...urlList,
                     { originalLink: response.data.result.original_link, shortLink: response.data.result.share_link }
@@ -31,7 +51,10 @@ function Shorten() {
             })
             .catch(error => {
                 setIsLoading(false);
-                console.log('drdr error', error);
+                setToastMessage(error.response.data.error);
+                setTimeout(() => {
+                    setToastMessage(undefined);
+                }, 4500);
             });
     }
 
@@ -74,25 +97,30 @@ function Shorten() {
     }
 
     return (
-        <div className='shorten'>
-            <div className='shorten-banner bg-very-dark-blue'>
-                <div className='input-group'>
-                    <span className="validation">
-                        <input className={!isValid && hasBeenClickedAtLeastOnce ? 'shorten-input invalid' : 'shorten-input'} placeholder='Shorten a link here...'
-                            value={url}
-                            onChange={e => setName(e.target.value)} />
-                        {getInvalidMessage()}
-                    </span>
+        <form onSubmit={onSubmit}>
+            <div className='shorten'>
+                <div className='shorten-banner bg-very-dark-blue'>
+                    <div className='input-group'>
+                        <span className="validation">
+                            <input className={!isValid && hasBeenClickedAtLeastOnce ? 'shorten-input invalid' : 'shorten-input'} placeholder='Shorten a link here...'
+                                value={url}
+                                onChange={e => setValueWithValidityCheck(e.target.value)} />
+                            {getInvalidMessage()}
+                        </span>
 
-                    <button className='btn btn-cyan shorten-button' onClick={onSubmit}
-                        disabled={isLoading}>
-                        Shorten it!
-                    </button>
-                    {getLoading()}
-                </div>
+                        <button className='btn btn-cyan shorten-button' type='submit'
+                            disabled={isLoading}>
+                            Shorten it!
+                        </button>
+                        {getLoading()}
+                    </div>
+                </div >
+                {getLinksList()}
             </div >
-            {getLinksList()}
-        </div >
+            <div className={toastMessage ? 'error-toast  error-toast-show' : 'error-toast'}>
+                {toastMessage}
+            </div>
+        </form>
     );
 }
 

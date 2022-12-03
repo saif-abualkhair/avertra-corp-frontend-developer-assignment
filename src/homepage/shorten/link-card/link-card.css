@@ -42,8 +42,8 @@
     overflow: auto;
 }
 
-.separator{
-    display: hidden;
+.links .separator{
+    display: none;
     margin: 15px 0;
     background-color: rgba(0, 0, 0, 0.116);
 }
@@ -69,6 +69,6 @@
     }
 
     .separator{
-        display: blick;
+        display: block;
     }
 }

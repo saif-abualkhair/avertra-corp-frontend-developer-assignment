@@ -25,6 +25,14 @@ body {
   --light: hsl(0, 0%, 98%);
 }
 
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 /* Primary */
 .text-cyan {
   color: var(--cyan);
@@ -93,28 +101,9 @@ body {
 }
 
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .btn {
@@ -260,4 +249,24 @@ body {
 
 .sh-pinterest {
   background: url('/src/assets/images/icon-pinterest.svg') no-repeat;
+}
+
+.error-toast {
+  display: none;
+  background-color: var(--red);
+  color: var(--light);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 40%;
+  text-align: center;
+  z-index: 999;
+}
+
+.error-toast-show {
+  display: block;
 }
